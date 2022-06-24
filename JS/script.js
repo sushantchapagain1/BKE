@@ -1,4 +1,5 @@
 "use strict";
+
 // Hero Slider
 const slides = document.querySelectorAll(".slide");
 const slideBtnleft = document.querySelector(".slider-btn-left");
@@ -7,6 +8,8 @@ const dotsContainer = document.querySelector(".dots");
 const headingHero = document.querySelectorAll(".hero-heading");
 const btnHero = document.querySelectorAll(".btn-primary");
 const textHero = document.querySelectorAll(".hero-info-small");
+
+const header = document.querySelector(".header");
 
 /////////////////////////////////////////////////////////////
 //HERO SLIDER WITH ANIMATIONS
@@ -18,7 +21,6 @@ const maxSlide = slides.length;
 const goToSlide = function (slideNo) {
   slides.forEach((s, i) => {
     s.style.transform = `translateX(${(i - slideNo) * 100}%)`;
-    // to
     setTimeout(() => {
       s.style.opacity = 1;
     }, 1000);
@@ -45,13 +47,13 @@ const activeDotFinder = function (slides) {
 
 // Animate the heading
 const animateHeroHeadingBounce = function (slideNo) {
-  headingHero.forEach((heading) =>
+  headingHero.forEach((heading) => {
     heading.classList.remove(
       "animate__animated",
       "animate__fadeInDown",
       "animate__delay-1.5s"
-    )
-  );
+    );
+  });
   document
     .querySelector(`.heading-${slideNo + 1}`)
     .classList.add(
@@ -103,7 +105,7 @@ const initSlider = function () {
   animateHeroText(currentSlide);
   animateHeroBtn(currentSlide);
 };
-
+initSlider();
 const nextSlide = function () {
   if (currentSlide < maxSlide - 1) {
     currentSlide++;
@@ -136,9 +138,7 @@ dotsContainer.addEventListener("click", function (e) {
     const currentDotSlide = e.target.dataset.slide;
     goToSlide(currentDotSlide);
     activeDotFinder(currentDotSlide);
-    animateHeroHeadingBounce(currentDotSlide);
-    animateHeroText(currentDotSlide);
-    animateHeroBtn(currentDotSlide);
+    // animateHeroBtn(currentDotSlide);
   }
 });
 
@@ -146,11 +146,35 @@ slideBtnRight.addEventListener("click", nextSlide);
 slideBtnleft.addEventListener("click", prevSlide);
 
 document.addEventListener("keydown", function (e) {
-  console.log(e.key);
   if (e.key === "ArrowRight") nextSlide();
   if (e.key === "ArrowLeft") prevSlide();
 });
-initSlider();
+
+/////////////////////////////////////////////////////////////
+//FEATURED IN OWl CAUROSEL
+/////////////////////////////////////////////////////////////
+$(".owl-carousel").owlCarousel({
+  margin: 10,
+  responsiveClass: true,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
+  loop: true,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    500: {
+      items: 3,
+    },
+    700: {
+      items: 4,
+    },
+    1000: {
+      items: 5,
+    },
+  },
+});
 
 /////////////////////////////////////////////////////////////
 //STICKY NAVBAR

@@ -11,11 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- animate Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <!-- animate css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
     <!-- Custom Mine css -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/generals.css" />
@@ -30,8 +35,17 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- custome mine js -->
-    <script defer src="JS/script.js"></script>
+    <script type="module" defer src="JS/script.js"></script>
   </head>
   <body>
     <!-- Company neccessary info-->
@@ -41,11 +55,15 @@
           <div class="icon-text-wrapper">
             <!-- prettier-ignore -->
             <ion-icon name="phone-portrait-outline" class="info-icons"></ion-icon>
-            <p>9851067370</p>
+            <a href="tel:9851067370" class="mini-header-action-links"
+              >9851067370</a
+            >
           </div>
           <div class="icon-text-wrapper">
             <ion-icon name="call-outline" class="info-icons"></ion-icon>
-            <p>9841528946</p>
+            <a href="tel:9841528946" class="mini-header-action-links"
+              >9841528946</a
+            >
           </div>
         </div>
         <div class="icon-text-wrapper">
@@ -54,7 +72,9 @@
         </div>
         <div class="icon-text-wrapper">
           <ion-icon name="mail-outline" class="info-icons"></ion-icon>
-          <p>bke.com.np@gmail.com</p>
+          <a href="mailto:bke.com.np@gmail.com" class="mini-header-action-links"
+            >bke.com.np@gmail.com</a
+          >
         </div>
       </div>
     </section>
@@ -99,7 +119,7 @@
                 materials so products last longer and it looks nice and clean
                 for customers.</span
               >
-              <button class="btn btn-primary hero-btn-1">Buy Now &darr;</button>
+              <button class="btn btn-primary hero-btn-1">Buy Now</button>
             </div>
             <div class="hero-img">
               <img
@@ -122,9 +142,7 @@
                 materials so that product last longer and it looks nice and
                 clean for customers.</span
               >
-              <button class="btn btn-primary hero-btn-2">
-                Learn More &darr;
-              </button>
+              <button class="btn btn-primary hero-btn-2">Learn More</button>
             </div>
             <div class="hero-img">
               <img
@@ -147,7 +165,7 @@
                 materials so that product last longer and it looks nice and
                 clean for customers.</span
               >
-              <button class="btn btn-primary hero-btn-3">Buy Now &darr;</button>
+              <button class="btn btn-primary hero-btn-3">Buy Now</button>
             </div>
             <div class="hero-img">
               <img
@@ -175,7 +193,121 @@
           <div class="dots"></div>
         </div>
       </section>
-      <!-- Section Applications -->
+      <!-- Featured In Section -->
+      <section class="featured-in">
+        <div class="container">
+          <h2 class="sub-heading">As Featured In</h2>
+          <div class="owl-carousel owl-theme featured-in-img-container">
+            <div class="item">
+              <img
+                src="images/bke-client-01.png"
+                alt="RoadHouse Cafe Logo"
+                class="customer-image"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="images/bke-client-02.png"
+                alt="KKFC Logo"
+                class="customer-image"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="images/bke-client-03.png"
+                alt="Park Village Logo"
+                class="customer-image"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="images/bke-client-04.png"
+                alt="The Last Resort Logo"
+                class="customer-image"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="images/bke-client-05.png"
+                alt="Vivanta Logo"
+                class="customer-image"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="images/bke-client-06.png"
+                alt="Hot Chilly Logo"
+                class="customer-image"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="images/bke-client-09.png"
+                alt="Momotaro Resturant"
+                class="customer-image"
+              />
+            </div>
+            <div class="item">
+              <img
+                src="images/bke-client-10.png"
+                alt="Local Sekuwa Resturant Logo"
+                class="customer-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section category -->
+      <section class="section-usages section-space">
+        <div class="container grid grid-2-cols grid-space">
+          <div class="category-left grid category-gap">
+            <div class="category category-heating grid grid-2-cols">
+              <div class="category-txt-wrapper">
+                <h3 class="category-heading">#Heating</h3>
+                <p class="category-desc">
+                  Discover Our <br />
+                  Heating Equipments
+                </p>
+              </div>
+              <img
+                src="images/display-counter.png"
+                alt="Heating Stainless Steel Equipment"
+                class="category-img"
+              />
+            </div>
+            <div class="category category-cooling grid grid-2-cols">
+              <div class="category-txt-wrapper">
+                <h3 class="category-heading">#Cooling</h3>
+                <p class="category-desc">
+                  Discover Our <br />
+                  Heating Equipments
+                </p>
+              </div>
+              <img
+                src="images/displayCounterWithProducts.png"
+                alt="Heating Stainless Steel Equipment"
+                class="category-img"
+              />
+            </div>
+          </div>
+          <div class="category-right grid">
+            <div class="category category-others grid grid-2-cols">
+              <div class="category-txt-wrapper">
+                <h3 class="category-heading">#Cooling</h3>
+                <p class="category-desc">
+                  Discover Our <br />
+                  Heating Equipments
+                </p>
+              </div>
+              <img
+                src="images/display-counter.png"
+                alt="Heating Stainless Steel Equipment"
+                class="category-img-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

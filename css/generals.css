@@ -6,9 +6,10 @@
   --primary-color: #71db77;
   --white: #ffffff;
   --gray-color: #333;
-  --slider-whiteishgray: #f6f6f6;
+  --whiteishgray: #f6f6f6;
   --lessImp-info-color: #655d55;
   --text-color: #242424;
+  --border-color: #ebebeb;
 }
 .btn {
   border: none;
@@ -30,7 +31,16 @@
 }
 .grid-2-cols {
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 4.2rem;
+  column-gap: 2.4rem;
 }
-
-/* margin: 8rem 0; Section Spacing */
+.section-space {
+  padding: 4.8rem 0;
+}
+.sub-heading {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.5;
+  margin-bottom: 2.4rem;
+}
